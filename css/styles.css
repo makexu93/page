@@ -1,0 +1,22 @@
+body {
+  background-color: #f5f5f5;
+}
+hr {
+  border-style: dotted none none none;
+  width: 10%;
+  border-width: 8px;
+  border-color: #364f6b;
+}
+img {
+  height: 200px;
+}
+h1 {
+  color: #3fc1c9;
+}
+h3 {
+  color: #3fc1c9;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+}
