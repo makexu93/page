@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sentiment Analysis Web App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    function submitForm(oFormElement) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function() {
+        var result = parseFloat(xhr.responseText);
+        var resultElement = document.getElementById('result');
+
+        resultElement.className = 'bg-success';
+        resultElement.innerHTML = result;
+
+      }
+      xhr.open(oFormElement.method, oFormElement.action, true);
+      var review = document.getElementById('review');
+      xhr.send(review.value);
+      return false;
+    }
+  </script>
+
+</head>
+
+
+  <script>
+  function concatString() {
+    var button = document.getElementById("test");
+    var title = document.getElementById("title");
+    var budget = document.getElementById("budget");
+    console.log(budget.value);
+    var cast = document.getElementById("cast");
+    console.log(cast.value);
+    var cast_array = cast.value.split(',');
+    var cast_array = "'" + cast_array.join("','") + "'";
+    var runtime = document.getElementById("runtime");
+    var r_date_year = document.getElementById("r_date_year");
+    var r_date_month = document.getElementById("r_date_month");
+    var genres = document.getElementById("genres");
+    var genres_array = genres.value.split(',');
+    var genres_array = "'" + genres_array.join("','") + "'";
+    var franchise = document.getElementById("franchise");
+
+    var str = "{'budget':" + budget.value +
+      ",'main_cast': [[" + cast_array + "]]" +
+      ",'runtime':" + runtime.value +
+      ",'release_date_year':" + r_date_year.value +
+      ",'release_date_month':" + r_date_month.value +
+      ",'genres': [[" + genres_array + "]]" +
+      ",'franchise':'" + franchise.value + "'}";
+
+    document.getElementById("review").innerHTML = str;
+    console.log(str);
+    console.log(typeof str);
+  };
+  </script>
+
+
+<body>
+  <div class="container">
+    <h1>Box Office Predictor</h1>
+    <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
+    <div class="form-group">
+      <label>
+        Enter title:
+        <input id="title" value="Inception">
+      </label>
+      <br />
+      <label>
+        Enter budget:
+        <input id="budget" value="100000000" required="required">
+      </label>
+      <br />
+      <label>
+        Enter cast:
+        <input id="cast" value="Leonardo DiCaprio,Tom Hardy" required="required">
+      </label>
+      <br>
+      <label>
+        Enter runtime:
+        <input id="runtime" value="120" required="required">
+      </label>
+      <br>
+      <label>
+        Enter Release Date Year:
+        <input id="r_date_year" value="2020" required="required">
+      </label>
+      <br>
+      <label>
+        Enter Release Date Month:
+        <input id="r_date_month" value="10" required="required">
+      </label>
+      <br>
+      <label>
+        Enter Release Date Month:
+        <input id="r_date_month" value="10" required="required">
+      </label>
+      <br>
+      <label>
+        Enter Genres:
+        <input id="genres" value="Action,Crime" required="required">
+      </label>
+      <br>
+      <label>
+        Enter Franchise:
+        <input id="franchise" value="The Avengers Collection" required="required">
+      </label>
+      <br />
+      <!--  <button onclick="concatString()">Test</button> -->
+    </div>
+
+
+    <form method="POST" action="https://y7bepg34me.execute-api.eu-central-1.amazonaws.com/prod" onsubmit="return submitForm(this);">
+      <div class="form-group">
+        <button onclick="concatString()">Submit</button>
+        <br>
+        <label for="review"></label>
+        <textarea class="form-control" rows="5" id="review"></textarea>
+      </div>
+      <!--<button type="submit" class="btn btn-default">Submit</button> -->
+    </form>
+    <br>
+    <h1 class="bg-success" id="result"></h1>
+  </div>
+
+
+
+
+
+</body>
+
+
+
+</html>
