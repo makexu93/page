@@ -3,45 +3,153 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Marco's Site</title>
+  <title>Marco Xu</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 </head>
 
 <body>
-  <img class="Profilbild" src="images/IMG_0276 2 rund min.png" alt="Marco Xu Picture">
-  <h1>Marco Xu</h1>
-  <p><em>Data Analyst, Data Science Trainer and Blogger.</em></p>
-  <hr>
-  <h3>Projects</h3>
-    <ol>
-      <li><a href="https://businessdatascience.de/">Business Data Science Website</a></li>
-      <li><a href="https://blog.businessdatascience.de/">Business Data Science Blog</a></li>
-      <li><a href="https://www.akupunktur-tcm-trier.de/">Akupunktur Trier Website</a></li>
-      <li><a href="https://vast-stream-95259.herokuapp.com/">Customer Churn App</a></li>
-    </ol>
-    <hr>
-    <h3>About</h3>
-    <table>
-      <tr>
-        <td>01/2020</td>
-        <td>Freelance Data Science Trainer</td>
-      </tr>
-      <tr>
-        <td>02/2019</td>
-        <td>Data Analyst at Siemens Financial Services</td>
-      </tr>
-    </table>
-    <hr>
-    <img class="picture1 floating" src="images/data_and_settings.png" alt="picture1">
-    <p><a href="box-office-predictor.html">Box Office Predictor</a></p>
-    <br>
-    <p><a href="imprint.html">Impressum</a></p>
-    <br>
-    <p><a href="contact.html">Contact</a></p>
 
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_vU6KP7/Astronaut/astronaout.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+
+  <section class="white-section" id="title">
+
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg">
+
+        <a class="navbar-brand" href="">Marco Xu</a>
+
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:marcoxu.data@gmail.com"><i class="fas fa-envelope"></i></a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+
+
+      <!-- Title -->
+
+      <div class="row">
+
+        <div class="col-lg-6 quote">
+          <h2 class="quote-text">“Once a new technology rolls over you, if you're not part of the steamroller, you're part of the road.”</h2>
+          <p class="quote-author">Stewart Brand, Writer</p>
+        </div>
+
+        <div class="col-lg-6">
+          <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_vU6KP7/Astronaut/astronaout.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></lottie-player>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- About me -->
+
+  <section class="about colored-section" id="about">
+    <div class="container-fluid">
+      <h1>Marco Xu</h1>
+      <p><em>Data Analyst, Data Science Trainer and Blogger. <br>Passionate about movies, web-design and Korean food.</em></p>
+
+  </section>
+
+
+  <!-- Features -->
+
+  <section class="white-section projects" id="projects">
+
+    <div class="container-fluid">
+
+      <h1>Projects</h1>
+
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <a href="https://businessdatascience.de/"> <i class="fas fa-chart-line feature-icon"></i></a>
+          <h3 class="feature-title">Business Data Science Homepage</h3>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <a href="https://blog.businessdatascience.de/"> <i class="fab fa-blogger-b feature-icon"></i></a>
+          <h3 class="feature-title">Business Data Science Blog</h3>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <a href="https://www.akupunktur-tcm-trier.de/"> <i class="fas fa-leaf feature-icon"></i></a>
+          <h3 class="feature-title">Akupunktur Trier Homepage</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <a href="https://vast-stream-95259.herokuapp.com/"> <i class="fas fa-users feature-icon"></i> </a>
+          <h3 class="feature-title">Customer Churn App</h3>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <a href="box-office-predictor.html"> <i class="fas fa-ticket-alt feature-icon"></i></a>
+          <h3 class="feature-title">Box Office Predictor</h3>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="colored-section footer" id="footer">
+    <div class="container-fluid">
+      <a href="https://www.linkedin.com/in/marco-xu-data-science/"> <i class="social-icon fab fa-linkedin"></i> </a>
+      <a href="https://github.com/makexu93"> <i class="social-icon fab fa-github"></i> </a>
+      <a href="https://medium.com/@marcoxu.data"> <i class="social-icon fab fa-medium"></i> </a>
+      <a href="mailto:marcoxu.data@gmail.com"> <i class="social-icon fas fa-envelope"></i> </a>
+      <p class="copyright">© Copyright <script>
+          document.write(new Date().getFullYear())
+        </script> Marco Xu</p>
+      <div class="footer-links-div">
+        <a class="footer-links" href="imprint.html">Impressum</a>
+      </div>
+
+    </div>
+  </footer>
 
 
 </body>
