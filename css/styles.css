@@ -10,6 +10,10 @@ body {
   height: 400px;
 }
 
+/* .title {
+  height: 100vh;
+} */
+
 @media (max-width: 600px) {
   .title-image {
     height: 300px;
@@ -64,6 +68,7 @@ body {
 
 #title .container-fluid {
   padding-top: 3%;
+  padding-bottom: 5%;
 }
 
 
@@ -136,14 +141,13 @@ font-size: 80px;
 .scroll{
     width: 30px;
     height: 50px;
-    position: absolute;
-    left: 50%;
     cursor: pointer;
+    left: auto;
+    margin: 0 auto 0 auto;
 }
 .scroll .mouse{
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    width: 25px;
+    height: 40px;
     top: 0;
     left: 0;
     display: block;
@@ -154,12 +158,11 @@ font-size: 80px;
     width: 4px;
     height: 4px;
     top: 10px;
-    left: 50%;
-    position: absolute;
+    margin: 4px auto 0 auto;
+
     background: #355c7d;
     display: block;
     border-radius: 50%;
-    margin-left: -2px;
     animation-name: scroll-wheel;
     animation-duration: 1s;
     animation-iteration-count: infinite;
