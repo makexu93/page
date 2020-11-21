@@ -6,15 +6,23 @@ body {
   font-family: "Ubuntu"
 }
 
+.nav-link:hover {
+  color: white;
+  font-weight: bold;
+}
+
 .title-image {
   height: 400px;
 }
 
-/* .title {
+.title {
   height: 100vh;
-} */
+  position: relative;
+  background-color: #355c7d;
+  color: white;
+}
 
-@media (max-width: 600px) {
+@media (max-width: 992px) {
   .title-image {
     height: 300px;
   }
@@ -36,7 +44,6 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
 }
-
 
 
 .nav-item {
@@ -73,12 +80,9 @@ body {
 
 
 .nav-link {
-  color: #355c7d;
+  color: white;
 }
 
-.navbar-brand {
-  color: #355c7d;
-}
 
 
 
@@ -142,8 +146,10 @@ font-size: 80px;
     width: 30px;
     height: 50px;
     cursor: pointer;
-    left: auto;
     margin: 0 auto 0 auto;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
 }
 .scroll .mouse{
     width: 25px;
@@ -151,7 +157,7 @@ font-size: 80px;
     top: 0;
     left: 0;
     display: block;
-    border: 2px solid #355c7d;
+    border: 2px solid white;
     border-radius: 20px;
 }
 .scroll .wheel{
@@ -160,7 +166,7 @@ font-size: 80px;
     top: 10px;
     margin: 4px auto 0 auto;
 
-    background: #355c7d;
+    background: white;
     display: block;
     border-radius: 50%;
     animation-name: scroll-wheel;
