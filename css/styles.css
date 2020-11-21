@@ -16,6 +16,9 @@ body {
   }
 }
 
+.logo-image {
+  width: 70px;
+}
 
 .navbar {
   padding-left: 0px;
@@ -121,4 +124,47 @@ body {
 .feature-icon:hover {
   color: #355c7d;
 font-size: 80px;
+}
+
+
+.scroll{
+    width: 30px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    cursor: pointer;
+}
+.scroll .mouse{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border: 2px solid #355c7d;
+    border-radius: 20px;
+}
+.scroll .wheel{
+    width: 4px;
+    height: 4px;
+    top: 10px;
+    left: 50%;
+    position: absolute;
+    background: #355c7d;
+    display: block;
+    border-radius: 50%;
+    margin-left: -2px;
+    animation-name: scroll-wheel;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes scroll-wheel{
+    from{
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    to{
+        transform: translate3d(0, 10px, 0);
+        opacity: 0;
+    }
 }
