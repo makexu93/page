@@ -4,6 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Social sharing tags -->
+  <meta property="og:title" content="Marco Xu">
+  <meta property="og:description" content="Welcome to my Website.">
+  <meta property="og:image" content="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortWaved&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Red&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Pale">
+  <meta property="og:url" content="https://marcoxu.de">
+  <meta name="twitter:card" content="summary_large_image">
+
   <title>Marco Xu</title>
 
   <!-- Google Fonts -->
@@ -21,41 +29,43 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+  <!-- Lottie Animations -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
   <!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortWaved&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Red&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Pale'>
+  <link rel="shortcut icon" type="image/x-icon"
+    href='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortWaved&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Red&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Pale'>
 
-<!-- Javascript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<!-- Smooth scrolling -->
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+  <!-- Smooth scrolling -->
+  <script>
+    $(document).ready(function() {
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
 
-      // Store hash
-      var hash = this.hash;
+          // Store hash
+          var hash = this.hash;
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function() {
 
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
       });
-    } // End if
-  });
-});
-</script>
+    });
+  </script>
 
 </head>
 
@@ -63,6 +73,10 @@ $(document).ready(function(){
 
 
 <body>
+
+  <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
 
 
   <section class="white-section title" id="title">
@@ -75,7 +89,8 @@ $(document).ready(function(){
 
 
 
-        <a class="navbar-brand" href=""><img class="logo-image" src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortWaved&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Red&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Pale'></a>
+        <a class="navbar-brand" href=""><img class="logo-image"
+            src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortWaved&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Red&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Pale'></a>
 
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
           <span class="navbar-toggler-icon"></span>
@@ -121,11 +136,11 @@ $(document).ready(function(){
       </div>
 
       <div class="scroll">
-          <a href="#about">
-              <div class="mouse">
-                  <div class="wheel"></div>
-              </div>
-          </a>
+        <a href="#about">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+        </a>
       </div>
 
     </div>
@@ -144,11 +159,13 @@ $(document).ready(function(){
       <p><em>Data Analyst, Data Science Trainer and Blogger. <br>Passionate about movies, web-design and Korean food.</em></p>
       <a href="Marco's Resume.pdf"><button type="button" class="btn btn-outline-dark btn-md resume-button"><i class="fas fa-eye"></i> View Resume</button></a>
 
+    </div>
 
   </section>
 
 
-  <!-- Features -->
+
+  <!-- Projects -->
 
   <section class="white-section projects" id="projects">
 
@@ -205,10 +222,24 @@ $(document).ready(function(){
       <div class="footer-links-div">
         <a class="footer-links" href="imprint.html">Impressum</a>
       </div>
+      <a class="footer-links" href="https://pages.github.com/">Hosted on Github Pages</a>
+
 
     </div>
   </footer>
 
+
+  <script>
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function() {myFunction()};
+
+  function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+  }
+  </script>
 
 </body>
 
