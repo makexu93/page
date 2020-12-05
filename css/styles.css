@@ -28,6 +28,7 @@ body {
     height: 300px;
     margin-top: -40px;
   }
+
 }
 
 .logo-image {
@@ -69,6 +70,7 @@ body {
 .colored-section {
   background-color: #355c7d;
   color: white;
+  text-align: center;
 }
 
 .container-fluid {
@@ -187,7 +189,7 @@ font-size: 80px;
 }
 
 
-.colored-section .container-fluid {
+.footer .container-fluid {
   padding: 2% 0;
 }
 
@@ -206,4 +208,23 @@ font-size: 80px;
   height: 6px;
   background: #f67280;
   width: 0%;
+}
+
+.table {
+  margin: 3% auto;
+  width: 60%;
+}
+
+@media (max-width: 992px) {
+  .table {
+    width: 100%;
+  }
+}
+
+.cv-section {
+  margin: 8% 0;
+}
+
+.tec-image {
+  width: 150px;
 }

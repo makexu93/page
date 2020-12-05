@@ -8,7 +8,8 @@
   <!-- Social sharing tags -->
   <meta property="og:title" content="Marco Xu">
   <meta property="og:description" content="Welcome to my Website.">
-  <meta property="og:image" content="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortWaved&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Red&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Pale">
+  <meta property="og:image"
+    content="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortWaved&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Red&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Pale">
   <meta property="og:url" content="https://marcoxu.de">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -74,9 +75,10 @@
 
 <body>
 
+
   <div class="progress-container">
-      <div class="progress-bar" id="myBar"></div>
-    </div>
+    <div class="progress-bar" id="myBar"></div>
+  </div>
 
 
   <section class="white-section title" id="title">
@@ -156,13 +158,94 @@
   <section class="about white-section" id="about">
     <div class="container-fluid">
       <h1>Hi, I'm Marco Xu</h1>
-      <p><em>Data Analyst, Data Science Trainer and Blogger. <br>Passionate about movies, web-design and Korean food.</em></p>
-      <a href="Marco's Resume.pdf"><button type="button" class="btn btn-outline-dark btn-md resume-button"><i class="fas fa-eye"></i> View Resume</button></a>
+      <p><em>Data Analyst, Data Science Trainer and Blogger. <br>Passionate about movies, web-design and technology.</em></p>
+
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <img src="images/1024px-Python-logo-notext.svg.png" alt="python" class="tec-image">
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <img src="images/Rlogo.svg" alt="python" class="tec-image">
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <img src="images/480px-Unofficial_JavaScript_logo_2.svg.png" alt="python" class="tec-image">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <img src="images/aws.png" alt="python" class="tec-image">
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <img src="images/Tableau.png" alt="python" class="tec-image">
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <img src="images/1200px-Power_bi_logo_black.svg.png" alt="python" class="tec-image">
+        </div>
+      </div>
 
     </div>
 
+
   </section>
 
+
+<!-- Resume -->
+
+  <section class="colored-section experience" id="experience">
+    <div class="container-fluid">
+<h1>Resume</h1>
+      <div class="cv-section">
+        <h3>Work</h3>
+        <table class="table table-hover">
+          <tr>
+            <td>2020 - today</td>
+            <td>Freelance Data Science Trainer</td>
+          </tr>
+          <tr>
+            <td>2019 - today</td>
+            <td>Data Analyst at Siemens Financial Services</td>
+          </tr>
+
+          <tr>
+            <td>2018</td>
+            <td>Data Analyst at Munich Re</td>
+          </tr>
+      </div>
+      </table>
+
+      <div class="cv-section">
+        <h3>Education</h3>
+        <table class="table table-hover">
+          <tr>
+            <td>2017</td>
+            <td>University College London</td>
+          </tr>
+
+          <tr>
+            <td>2014</td>
+            <td>Beihang University Beijing</td>
+          </tr>
+          <tr>
+            <td>2012 - 2018</td>
+            <td>Technische Universität München (M.Sc.)</td>
+          </tr>
+      </div>
+
+
+
+
+      </table>
+
+
+      </div>
+
+
+  </section>
 
 
   <!-- Projects -->
@@ -230,15 +313,17 @@
 
 
   <script>
-  // When the user scrolls the page, execute myFunction
-  window.onscroll = function() {myFunction()};
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {
+      myFunction()
+    };
 
-  function myFunction() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
-  }
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
   </script>
 
 </body>
