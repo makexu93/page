@@ -191,7 +191,7 @@ font-size: 80px;
 
 
 .footer .container-fluid {
-  padding: 2% 0;
+  padding: 3% 0;
 }
 
 
@@ -206,7 +206,7 @@ font-size: 80px;
 
 /* The progress bar (scroll indicator) */
 .progress-bar {
-  height: 6px;
+  height: 3px;
   background: #f67280;
   width: 0%;
 }
