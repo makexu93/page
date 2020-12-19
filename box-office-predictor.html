@@ -2,12 +2,22 @@
 <html lang="en">
 
 <head>
-  <title>Sentiment Analysis Web App</title>
+  <title>Box Office Predictor</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Bootstrap Scripts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/styles_box_office.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Roboto&display=swap" rel="stylesheet">
+
+
+
 
   <script type="text/javascript">
     function submitForm(oFormElement) {
@@ -17,7 +27,7 @@
         var resultElement = document.getElementById('result');
 
         resultElement.className = 'bg-success';
-        resultElement.innerHTML = result;
+        resultElement.innerHTML = '🚀 '+ result.toLocaleString() + ' $';
 
       }
       xhr.open(oFormElement.method, oFormElement.action, true);
@@ -30,7 +40,7 @@
 </head>
 
 
-  <script>
+<script>
   function concatString() {
     var button = document.getElementById("test");
     var title = document.getElementById("title");
@@ -41,98 +51,192 @@
     var cast_array = cast.value.split(',');
     var cast_array = "'" + cast_array.join("','") + "'";
     var runtime = document.getElementById("runtime");
-    var r_date_year = document.getElementById("r_date_year");
-    var r_date_month = document.getElementById("r_date_month");
+    var r_date = document.getElementById("r_date");
     var genres = document.getElementById("genres");
     var genres_array = genres.value.split(',');
     var genres_array = "'" + genres_array.join("','") + "'";
     var franchise = document.getElementById("franchise");
+    var language_array = language.value.split(',');
+    var language_array = "'" + language_array.join("','") + "'";
+    var production_country_array = production_country.value.split(',');
+    var production_country_array = "'" + production_country_array.join("','") + "'";
+    var production_company_array = production_company.value.split(',');
+    var production_company_array = "'" + production_company_array.join("','") + "'";
 
     var str = "{'budget':" + budget.value +
       ",'main_cast': [[" + cast_array + "]]" +
       ",'runtime':" + runtime.value +
-      ",'release_date_year':" + r_date_year.value +
-      ",'release_date_month':" + r_date_month.value +
+      ",'release_date':'" + r_date.value + "'" +
       ",'genres': [[" + genres_array + "]]" +
-      ",'franchise':'" + franchise.value + "'}";
+      ",'franchise':'" + franchise.value + "'" +
+      ",'spoken_languages': [[" + language_array + "]]" +
+      ",'production_countries': [[" + production_country_array + "]]" +
+      ",'production_companies': [[" + production_company_array + "]]}";
 
     document.getElementById("review").innerHTML = str;
     console.log(str);
     console.log(typeof str);
   };
-  </script>
+</script>
+
+
 
 
 <body>
-  <div class="container">
-    <h1>Box Office Predictor</h1>
-    <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
-    <div class="form-group">
-      <label>
-        Enter title:
-        <input id="title" value="Inception">
-      </label>
-      <br />
-      <label>
-        Enter budget:
-        <input id="budget" value="100000000" required="required">
-      </label>
-      <br />
-      <label>
-        Enter cast:
-        <input id="cast" value="Leonardo DiCaprio,Tom Hardy" required="required">
-      </label>
-      <br>
-      <label>
-        Enter runtime:
-        <input id="runtime" value="120" required="required">
-      </label>
-      <br>
-      <label>
-        Enter Release Date Year:
-        <input id="r_date_year" value="2020" required="required">
-      </label>
-      <br>
-      <label>
-        Enter Release Date Month:
-        <input id="r_date_month" value="10" required="required">
-      </label>
-      <br>
-      <label>
-        Enter Release Date Month:
-        <input id="r_date_month" value="10" required="required">
-      </label>
-      <br>
-      <label>
-        Enter Genres:
-        <input id="genres" value="Action,Crime" required="required">
-      </label>
-      <br>
-      <label>
-        Enter Franchise:
-        <input id="franchise" value="The Avengers Collection" required="required">
-      </label>
-      <br />
-      <!--  <button onclick="concatString()">Test</button> -->
+  <section class="title">
+    <div class="container">
+      <h1>🍿 Box Office Predictor 🍿</h1>
+      <h2>How successful is your own film project? 💵💵💵</h2>
+      <p>This application is the final Capstone Project of the Udacity Machine Learning Engineer Nanodegree.</p>
     </div>
 
+  </section>
 
-    <form method="POST" action="https://y7bepg34me.execute-api.eu-central-1.amazonaws.com/prod" onsubmit="return submitForm(this);">
-      <div class="form-group">
-        <button onclick="concatString()">Submit</button>
-        <br>
-        <label for="review"></label>
-        <textarea class="form-control" rows="5" id="review"></textarea>
+
+  <section class="info">
+    <div class="container">
+      <!-- Button trigger modal -->
+      <button type="button" class="modal-button btn btn-outline-light" data-toggle="modal" data-target="#exampleModal">
+        ℹ️ Info
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Info</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>This Box Office Predictor is the final Capstone Project of the <a href="https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009t">Udacity Machine Learning Engineer Nanodegree</a>.
+                It uses Machine Learning hosted on AWS to predict the Box Office based on movie information given by the user.</p>
+              <p>📩 marcoxu.data@gmail.com</p>
+              <p> <a href="https://github.com/makexu93/box-office-predictor">Github Repository</a> </p>
+
+              <p><a href="https://www.reddit.com/r/PlexPosters/comments/ck1rmx/poster_near_4k_collage_containing_330_movie/">Image Source</a></p>
+              <p>© Marco Xu <script>document.write(new Date().getFullYear())</script></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Got it!</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <!--<button type="submit" class="btn btn-default">Submit</button> -->
-    </form>
-    <br>
-    <h1 class="bg-success" id="result"></h1>
-  </div>
+    </div>
+  </section>
+
+
+
+  <section class="form-input">
+    <div class="container">
+
+      <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
+      <div class="form-group">
+        <div class="row">
+          <div class="col-lg-6">
+            <label>
+              Title:
+              <input id="title" class="input-field" value="My Movie">
+            </label>
+            <br />
+            <label>
+              Budget in $:
+              <input id="budget" class="input-field" value="100000000" required="required">
+            </label>
+            <br />
+            <label>
+              Cast:
+              <input id="cast" class="input-field" value="Leonardo DiCaprio,Tom Hardy" required="required">
+            </label>
+            <br>
+            <label>
+              Runtime:
+              <input id="runtime" class="input-field" value="120" required="required">
+            </label>
+            <br>
+            <label>
+              Release Date:
+              <input id="r_date" class="input-field" value="2019/03/23" required="required">
+            </label>
+            <br>
+            <label>
+              Genres:
+              <input id="genres" class="input-field" value="Action,Crime" required="required">
+            </label>
+            <br>
+
+          </div>
+
+          <div class="col-lg-6">
+
+
+
+            <label>
+              Franchise:
+              <input id="franchise" class="input-field" value="None" required="required">
+            </label>
+            <br />
+            <label>
+              Spoken Languages:
+              <input id="language" class="input-field" value="en,jp" required="required">
+            </label>
+            <br />
+            <label>
+              Production Countries:
+              <input id="production_country" class="input-field" value="United States of America,South Korea" required="required">
+            </label>
+            <br />
+            <label>
+              Production Companies:
+              <input id="production_company" class="input-field" value="Walt Disney Pictures,Paramount Pictures" required="required">
+            </label>
+            <br />
+
+
+          </div>
+
+        </div>
+
+
+        <!--  <button onclick="concatString()">Test</button> -->
+      </div>
+
+
+      <form method="POST" action="https://dvjx5ggnuk.execute-api.eu-central-1.amazonaws.com/prod" onsubmit="return submitForm(this);">
+        <div class="form-group">
+          <button class="btn btn-success" onclick="concatString()">Predict Box Office</button>
+          <br>
+          <input type="checkbox" id="show-string" name="show-string" value="show-string">
+          <label class="checkbox-text" for="show-string"> Show submitted string</label>
+
+          <br>
+          <label for="review"></label>
+          <textarea class="form-control" rows="5" id="review"></textarea>
+        </div>
+      </form>
+      <br>
+      <h1 class="bg-success" id="result"></h1>
+
+    </div>
+  </section>
 
 
 
 
+  <script type="text/javascript">
+  var isChecked = document.getElementById("show-string");
+    isChecked.onclick = function () {
+      if (isChecked.checked == true) {
+        document.getElementById("review").style.display = "inline";
+      } else {
+        document.getElementById("review").style.display = "none";
+      }
+
+
+    }
+  </script>
 
 </body>
 

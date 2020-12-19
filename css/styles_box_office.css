@@ -1,0 +1,52 @@
+
+body {
+  font-family: 'Limelight', cursive;
+  color: white;
+  background: url("movie-posters.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.info .container {
+  padding: 0 10%;
+}
+.modal-button {
+  margin-left: 95%;
+}
+
+
+.input-field {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+.title {
+  text-align: center;
+}
+
+.container {
+  padding: 2% 10%;
+}
+
+/* h1, h2, h3, h4 {
+  color: #086972;
+} */
+
+.form-control {
+  display: none;
+}
+
+.modal {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+#show-string, .checkbox-text {
+  font-size: 10px;
+}
