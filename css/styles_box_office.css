@@ -13,9 +13,9 @@ body {
 .info .container {
   padding: 0 10%;
 }
-.modal-button {
+/* .modal-button {
   margin-left: 95%;
-}
+} */
 
 
 .input-field {
@@ -49,4 +49,12 @@ body {
 
 #show-string, .checkbox-text {
   font-size: 10px;
+}
+
+.footer {
+  text-align: center;
+}
+.footer-link {
+  padding: 20px;
+  color: white;
 }
