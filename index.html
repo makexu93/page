@@ -10,6 +10,9 @@
   <meta property="og:description" content="Welcome to my Website.">
   <meta property="og:image"
     content="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortWaved&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Red&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Pale">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
   <meta property="og:url" content="https://marcoxu.de">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -40,33 +43,7 @@
   <!-- Javascript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <!-- Smooth scrolling -->
-  <script>
-    $(document).ready(function() {
-      // Add smooth scrolling to all links
-      $("a").on('click', function(event) {
 
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-
-          // Store hash
-          var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function() {
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
-      });
-    });
-  </script>
 
 </head>
 
@@ -74,6 +51,8 @@
 
 
 <body>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
   <div class="progress-container">
@@ -316,6 +295,20 @@
       </div>
 
 
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <a href="movie-lines/index.html"> <i class="fas fa-video feature-icon"></i> </a>
+
+          <a href="movie-lines/index.html">
+            <h3 class="feature-title">Movie Lines Player</h3>
+          </a>
+
+        </div>
+
+
+      </div>
+
+
     </div>
   </section>
 
@@ -340,20 +333,11 @@
     </div>
   </footer>
 
+  <script src="index.js" charset="utf-8"></script>
 
-  <script>
-    // When the user scrolls the page, execute myFunction
-    window.onscroll = function() {
-      myFunction()
-    };
 
-    function myFunction() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    }
-  </script>
+
+
 
 </body>
 

@@ -1,0 +1,86 @@
+body {
+  text-align: center;
+  background-color: #283149;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #DA0463;
+
+}
+
+footer {
+  color: #DBEDF3;
+  font-family: sans-serif;
+}
+
+.w {
+background-image: url("images/800px-Matthew_McConaughey_2019_(48648344772).jpg");
+}
+
+.a {
+background-image: url("images/Gerard-Butler-This-Is-Sparta (1).jpg");
+}
+
+.s {
+background-image: url("images/media.media.7f997434-9643-4132-b769-a10f03b57371.original1024.jpg");
+}
+
+.d {
+background-image: url("images/heath-ledger-nebendarsteller-the-dark-knight.jpg");
+}
+
+.j {
+background-image: url("images/leonardo-dicaprio-james-cameron-today-main-190208-02_78a00327db5553b94a92e8a02d151d11.jpg");
+}
+
+.k {
+background-image: url("images/fight_club_workout_quer.jpg");
+}
+
+.l {
+background-image: url("images/maxresdefault.jpg");
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 3rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+  background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    padding-top: 50px;
+
+}
