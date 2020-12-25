@@ -49,6 +49,12 @@ body {
     height: 300px;
     margin-top: -40px;
   }
+  .cursor, .link-grow {
+    display: none;
+  }
+  body {
+    cursor: auto;
+  }
 
 }
 
