@@ -1,3 +1,24 @@
+/// mouse cursor
+let mouseCursor = document.querySelector(".cursor");
+let navLinks = document.querySelectorAll("a, #myBtn");
+
+window.addEventListener("mousemove", cursor);
+
+function cursor(e){
+  mouseCursor.style.top = e.pageY + "px";
+  mouseCursor.style.left = e.pageX + "px";
+}
+
+navLinks.forEach(link => {
+  link.addEventListener('mouseleave', () => {
+    mouseCursor.classList.remove("link-grow");
+  });
+  link.addEventListener('mouseover', () => {
+    mouseCursor.classList.add("link-grow");
+  });
+})
+
+
 
 
 ////scroll to top button
@@ -14,6 +35,12 @@ function scrollFunction() {
   }
 };
 
+
+window.onscroll = function() {
+  myFunction()
+  scrollFunction()
+};
+
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   window.scrollTo({top: 0, behavior: 'smooth'});
@@ -27,10 +54,7 @@ function topFunction() {
 
 // Progress bar
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {
-  myFunction()
-  scrollFunction()
-};
+
 
 function myFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
