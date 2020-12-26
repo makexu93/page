@@ -114,7 +114,9 @@ body {
   color: white;
 }
 
-
+#projects .container-fluid {
+  padding: 7% 5%;
+}
 
 
 .projects {
