@@ -278,3 +278,39 @@ font-size: 80px;
 #myBtn:hover {
   color: #c06c84;
 }
+
+
+
+
+/* Tag Cloud */
+.tagcloud {
+  font-size: 24px;
+  color: #355c7d;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+  .tagcloud {
+    font-size: 18px;
+  }
+}
+
+.tagcloud--item {
+  padding: 2px 4px;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.tagcloud--item:hover {
+  color: #f67280;
+  z-index: 100 !important;
+}
+
+.light .tagcloud--item {
+  color: #fff;
+}
+
+.light .tagcloud--item:hover {
+  background-color: rgba(255,255,255,.1);
+  border: 1px solid #fff;
+}

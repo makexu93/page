@@ -91,3 +91,57 @@ $(document).ready(function() {
     } // End if
   });
 });
+
+
+
+
+
+////// Tag cloud
+const myTags = [
+      'JavaScript', 'CSS', 'HTML',
+      'Python', 'R', 'SQL',
+      'Wordpress', 'Tableau', 'PowerBI',
+      'AWS', 'SPSS', 'SAS',
+];
+
+if ($(window).width() < 960) { // some code..
+ var tagCloud = TagCloud('.content', myTags,{
+
+     // radius in px
+     radius: 200,
+
+     // animation speed
+     // slow, normal, fast
+     maxSpeed: 'normal',
+     initSpeed: 'normal',
+
+     // 0 = top
+     // 90 = left
+     // 135 = right-bottom
+     direction: 135,
+
+     // interact with cursor move on mouse out
+     keep: true
+
+ });
+} else {
+  var tagCloud = TagCloud('.content', myTags,{
+
+      // radius in px
+      radius: 300,
+
+      // animation speed
+      // slow, normal, fast
+      maxSpeed: 'normal',
+      initSpeed: 'normal',
+
+      // 0 = top
+      // 90 = left
+      // 135 = right-bottom
+      direction: 135,
+
+      // interact with cursor move on mouse out
+      keep: true
+
+  });
+};
