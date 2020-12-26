@@ -108,7 +108,7 @@ if ($(window).width() < 960) { // some code..
  var tagCloud = TagCloud('.content', myTags,{
 
      // radius in px
-     radius: 200,
+     radius: 150,
 
      // animation speed
      // slow, normal, fast
