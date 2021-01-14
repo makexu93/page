@@ -319,3 +319,25 @@ font-size: 80px;
   background-color: rgba(255,255,255,.1);
   border: 1px solid #fff;
 }
+
+
+
+
+
+.overlay{
+  position:fixed;
+  background:white;
+  opacity:.9;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  z-index:10000
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -155,13 +155,13 @@ if ($(window).width() < 960) { // some code..
 
 $(document).ready(function() {
   var myVar;
-  $(".fade-button").click(function() {
+  $(".init-overlay").click(function() {
     myFunction(this);
   });
 
   function myFunction(div) {
     $(".loader").toggle();
-    $(div).toggle();
+
 
   }
 
