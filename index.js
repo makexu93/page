@@ -4,7 +4,7 @@ let navLinks = document.querySelectorAll("a, #myBtn");
 
 window.addEventListener("mousemove", cursor);
 
-function cursor(e){
+function cursor(e) {
   mouseCursor.style.top = e.pageY + "px";
   mouseCursor.style.left = e.pageX + "px";
 }
@@ -43,7 +43,10 @@ window.onscroll = function() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 
 };
 
@@ -98,50 +101,69 @@ $(document).ready(function() {
 
 ////// Tag cloud
 const myTags = [
-      'JavaScript', 'CSS', 'HTML',
-      'Python', 'R', 'SQL',
-      'Wordpress', 'Tableau', 'PowerBI',
-      'AWS', 'SPSS', 'SAS',
+  'JavaScript', 'CSS', 'HTML',
+  'Python', 'R', 'SQL',
+  'Wordpress', 'Tableau', 'PowerBI',
+  'AWS', 'SPSS', 'SAS',
 ];
 
 if ($(window).width() < 960) { // some code..
- var tagCloud = TagCloud('.content', myTags,{
+  var tagCloud = TagCloud('.content', myTags, {
 
-     // radius in px
-     radius: 150,
+    // radius in px
+    radius: 150,
 
-     // animation speed
-     // slow, normal, fast
-     maxSpeed: 'normal',
-     initSpeed: 'normal',
+    // animation speed
+    // slow, normal, fast
+    maxSpeed: 'normal',
+    initSpeed: 'normal',
 
-     // 0 = top
-     // 90 = left
-     // 135 = right-bottom
-     direction: 135,
+    // 0 = top
+    // 90 = left
+    // 135 = right-bottom
+    direction: 135,
 
-     // interact with cursor move on mouse out
-     keep: true
+    // interact with cursor move on mouse out
+    keep: true
 
- });
+  });
 } else {
-  var tagCloud = TagCloud('.content', myTags,{
+  var tagCloud = TagCloud('.content', myTags, {
 
-      // radius in px
-      radius: 300,
+    // radius in px
+    radius: 300,
 
-      // animation speed
-      // slow, normal, fast
-      maxSpeed: 'normal',
-      initSpeed: 'normal',
+    // animation speed
+    // slow, normal, fast
+    maxSpeed: 'normal',
+    initSpeed: 'normal',
 
-      // 0 = top
-      // 90 = left
-      // 135 = right-bottom
-      direction: 135,
+    // 0 = top
+    // 90 = left
+    // 135 = right-bottom
+    direction: 135,
 
-      // interact with cursor move on mouse out
-      keep: true
+    // interact with cursor move on mouse out
+    keep: true
 
   });
 };
+
+
+
+//add loader on button click
+
+$(document).ready(function() {
+  var myVar;
+  $(".fade-button").click(function() {
+    myFunction(this);
+  });
+
+  function myFunction(div) {
+    $(".loader").toggle();
+    $(div).toggle();
+
+  }
+
+
+});

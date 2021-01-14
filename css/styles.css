@@ -58,6 +58,11 @@ body {
 
 }
 
+.loader {
+  display: none;
+
+}
+
 .logo-image {
   width: 70px;
 }
