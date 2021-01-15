@@ -104,7 +104,7 @@ const myTags = [
   'JavaScript', 'CSS', 'HTML',
   'Python', 'R', 'SQL',
   'Wordpress', 'Tableau', 'PowerBI',
-  'AWS', 'SPSS', 'SAS',
+  'AWS', 'SPSS', 'Node.js', 'MongoDB','SAS'
 ];
 
 if ($(window).width() < 960) { // some code..
