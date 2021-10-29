@@ -103,8 +103,8 @@ $(document).ready(function() {
 const myTags = [
   'JavaScript', 'CSS', 'HTML',
   'Python', 'R', 'SQL',
-  'Wordpress', 'Tableau', 'Power BI',
-  'AWS', 'SPSS', 'Node.js', 'MongoDB','SAS', 'Mendix', 'Azure', 'SQL'
+  'Wordpress', 'Tableau', 'Power BI', 'Google Data Studio',
+  'AWS', 'SPSS', 'Node.js', 'MongoDB','SAS', 'Mendix', 'Azure', 'GCP', 'BigQuery', 'Google Analytics'
 ];
 
 if ($(window).width() < 960) { // some code..
